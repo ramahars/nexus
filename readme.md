@@ -265,30 +265,46 @@ nexus/
 │   │   └── core/
 │   ├── tests/
 │   ├── alembic/
-│   └── pyproject.toml
+│   ├── poetry.lock
+|   └── pyproject.toml      
 │
 ├── frontend/
+│   ├── public/
 │   ├── src/
 │   │   ├── app/
+│   │   │   ├── layouts/
+│   │   │   └── routes/
 │   │   ├── features/
-│   │   │   ├── datasets/
+│   │   │   ├── dashboard/
 │   │   │   ├── network-explorer/
 │   │   │   ├── communities/
-│   │   │   ├── topics/
 │   │   │   └── trends/
 │   │   ├── components/
-│   │   ├── services/
+│   │   │   ├── ui/
+│   │   │   └── layout/
 │   │   ├── hooks/
+│   │   ├── services/
 │   │   ├── types/
-│   │   └── utils/
-│   └── package.json
+│   │   ├── utils/
+│   │   ├── assets/
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── main.tsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
 │
 ├── docs/
-│   └── architecture.md
 │
-├── docker-compose.yml
-├── .env
 ├── .gitignore
+├── .gitattributes
+├── docker-compose.yml
+├── .env.example
 └── README.md
 ```
 
@@ -376,7 +392,7 @@ The frontend will be available at:
 
 | Phase | Milestone | Status |
 |---|---|---|
-| 1 | Project initialization and frontend foundation | Planned |
+| 1 | Project initialization and frontend foundation | Done |
 | 2 | Backend API and database setup | Planned |
 | 3 | Bluesky data ingestion | Planned |
 | 4 | Graph construction and network metrics | Planned |
