@@ -1,0 +1,31 @@
+[project]
+name = "nexus-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sarah",email = "sarahrama36@gmail.com"}
+]
+readme = "../README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "fastapi (>=0.162.0,<0.163.0)",
+    "uvicorn[standard] (>=0.54.0,<0.55.0)",
+    "sqlalchemy (>=2.1.8,<3.0.0)",
+    "psycopg[binary] (>=3.3.8,<4.0.0)",
+    "pydantic-settings (>=2.16.2,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "app" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+httpx = "^0.28.1"
+ruff = "^0.17.4"
+pytest = "^9.2.0"
+
