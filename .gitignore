@@ -1,0 +1,83 @@
+
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python packaging
+dist/
+build/
+*.egg-info/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# Type checking and linting
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# ==========================================
+# Node.js / React / TypeScript
+# ==========================================
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# ==========================================
+# IDEs and editors
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ==========================================
+# Operating systems
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Logs and temporary files
+# ==========================================
+*.log
+logs/
+tmp/
+temp/
+
+# ==========================================
+# Project data and generated files
+# ==========================================
+data/raw/
+data/processed/
+data/exports/
+*.parquet
+*.feather
+
+# ==========================================
+# Docker / local development
+# ==========================================
+*.pid
