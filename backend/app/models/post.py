@@ -11,7 +11,7 @@ class Post(Base):
     __tablename__ = "posts"
 
     __table_args__ = (
-        UniqueConstraint("dataset_id", "external_id")
+        UniqueConstraint("dataset_id", "external_id"),
     )
 
     id: Mapped[uuid.UUID] = mapped_column(
