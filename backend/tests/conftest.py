@@ -1,13 +1,14 @@
-import app.models  # noqa: F401
 import pytest
-from app.core.config import settings
-from app.core.database import get_db
-from app.main import app as fastapi_app
-from app.models.base import Base
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.engine import make_url
 from sqlalchemy.orm import sessionmaker
+
+import app.models  # noqa: F401
+from app.core.config import settings
+from app.core.database import get_db
+from app.main import app as fastapi_app
+from app.models.base import Base
 
 if not settings.test_database_url:
     raise RuntimeError("TEST_DATABASE_URL must be configured.")
