@@ -1,0 +1,37 @@
+
+repos:
+  - repo: local
+    hooks:
+      # Python: lint and automatically fix
+      - id: ruff-check
+        name: Ruff check
+        entry: poetry -C backend run ruff check --fix .
+        language: system
+        pass_filenames: false
+        types: [python]
+        files: ^backend/
+
+      # Python: formatting
+      - id: ruff-format
+        name: Ruff format
+        entry: poetry -C backend run ruff format .
+        language: system
+        pass_filenames: false
+        types: [python]
+        files: ^backend/
+
+      # Frontend: lint
+      - id: eslint
+        name: ESLint
+        entry: npm --prefix frontend run lint
+        language: system
+        pass_filenames: false
+        files: ^frontend/.*\.(ts|tsx|js|jsx)$
+
+      # Frontend: formatting
+      - id: prettier
+        name: Prettier
+        entry: npm --prefix frontend run format
+        language: system
+        pass_filenames: false
+        files: ^frontend/
