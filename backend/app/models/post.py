@@ -1,4 +1,3 @@
-
 import uuid
 from datetime import datetime
 
@@ -7,12 +6,11 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from app.models.base import Base
 
+
 class Post(Base):
     __tablename__ = "posts"
 
-    __table_args__ = (
-        UniqueConstraint("dataset_id", "external_id"),
-    )
+    __table_args__ = (UniqueConstraint("dataset_id", "external_id"),)
 
     id: Mapped[uuid.UUID] = mapped_column(
         Uuid,
@@ -45,7 +43,7 @@ class Post(Base):
     published_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
-    )    
+    )
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
